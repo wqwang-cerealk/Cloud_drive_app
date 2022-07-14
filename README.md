@@ -5,7 +5,7 @@
 
 - Step 1: Replace the rds-config.json (This is only required after the current rds expired)
 - Step 2: Go to server.js, replace the aws credential with the newest one. Since the academic aws credential 
-will be expired after 4 hours. Ask Zitao Shen (shenx.zit@northeastern.edu for details)
+will be expired after 4 hours.
 - Step 3: Open terminal at files location and run ``npm install``
 - Step 4: run ``node server js``
 - Step 5: Website can be visited at local at "localhost:3000" (Please test with 'Safari' browser, otherwise, you might need configure browser setting)
