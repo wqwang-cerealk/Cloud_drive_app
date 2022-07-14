@@ -1,0 +1,44 @@
+
+<style>
+   .container{
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      margin-top: 50px;
+      padding: 50px;
+   }
+</style>
+
+
+<div class="container">
+   <h3>Upload File</h3>
+   <form class="uploadform col s12" novalidate="" ng-submit="fileUpload()" enctype="multipart/form-data">
+      <div class="row">
+         <div class="input-field col s12">
+            <input placeholder="Email" id="email" type="email" name="email" ng-model="user.emailid">
+            <label for="Email">Email</label>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col s12">
+            <label style="display: inline-block;background-color: black;padding: 5px 10px;text-align: center;color: white;border-radius: 5px;" for="myFile" >Choose file</label>
+            <span id="filescontent">choose any file from your computer</span>
+            <input style="display: none;" class="userfile" id="myFile" type="file" name="myFile">
+         </div>
+      </div>
+      <div class="row">
+         <div class="input-field col s12">
+            <input style="background: rebeccapurple;" class="btn btn-success btn-block" type="Submit" name="" value="submit ">
+         </div>
+      </div>
+   </form>
+</div>
+
+<script>
+   let dom = document.getElementById("myFile")
+   dom.addEventListener("change",function(e){
+      // console.log(e.target.files[0].name)
+      let filescontent = document.getElementById("filescontent")
+      filescontent.innerHTML = e.target.files[0].name
+   })
+</script>

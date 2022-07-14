@@ -1,0 +1,36 @@
+
+
+
+<style>
+   .container{
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      margin-top: 50px;
+      padding: 50px;
+   }
+</style>
+<div class="container">
+   <h2>Update</h2>
+   <form class=" col s12" novalidate="">
+      <div class="row">
+         File to be Updated:
+         <div class="input-field col s12">
+            <input placeholder="Old file" type="text" name="oldfile" ng-model="oldfile">
+         </div>
+      </div>
+      <div class="row">
+         Select New File:
+         <div class="input-field col s12">
+            <input class="" id="newfile" type="file" name="newFile">
+            <!-- <label for="newfile">New File</label> -->
+         </div>
+      </div>
+      <div class="row">
+         <div class="input-field col s12">
+            <!-- <button class="btn waves-effect waves-teal"  ng-click="fileUpload()">Submit</button> -->
+            <input style="background: rebeccapurple;" class="waves-effect waves-light btn" type="button" name="" value="Update" ng-click="fileUpdate()">
+         </div>
+      </div>
+   </form>
+</div>

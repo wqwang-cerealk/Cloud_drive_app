@@ -1,0 +1,34 @@
+
+<style>
+  .container{
+     background-color: white;
+     color: black;
+     border-radius: 20px;
+     margin-top: 50px;
+     padding: 50px;
+  }
+</style>
+
+<div class="container">
+  <h3>All Uploads</h3>
+  <button class="btn waves-effect waves-teal" ng-click="fetchdata()">Fetch all Files</button>
+  <table class="bordered ">
+    <tr>
+      <th>File Name</th>
+      <th>File Location</th>
+      <th>File Upload Time</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr ng-repeat='n in fetched'>
+      <td>{{n.filename}}</td>
+      <td>{{n.filelocation}}</td>
+      <td>{{n.created | date:"MM/dd/yyyy"}}</td>
+      <td><a href="{{n.filelocation}}"><input class="btn btn-success btn-block" type="button" value="Download"></a>
+      </td>
+      <td><input class="btn btn-success btn-block" type="button" name="Delete" ng-click="fileRemove(n.filekey)"
+          value="Delete"></td>
+      <td><input style="background: rebeccapurple;" class="btn btn-success btn-block" type="button" ng-click="fileUpdate(n.filekey)" value="Update"></td>
+    </tr>
+  </table>
+</div>
